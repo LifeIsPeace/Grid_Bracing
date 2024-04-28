@@ -2,8 +2,13 @@ from grid_print import print_braced_grid
 import grid_rigidity as gr
 
 def main():
-    rows: int = int(input("Enter the number of rows of your grid: "))
-    columns: int = int(input("Enter the number of columns of your grid: "))
+    try:
+        rows: int = int(input("Enter the number of rows of your grid: "))
+        columns: int = int(input("Enter the number of columns of your grid: "))
+    # Think about later
+    except ValueError:
+        print("Invalid input entered")
+
     while rows < 1 or columns < 1:
        print("Rows and Columns must be greater than 0")
        rows: int = int(input("Enter the number of rows of your grid: "))
